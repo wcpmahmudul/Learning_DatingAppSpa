@@ -14,20 +14,9 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getValues();
   }
   registerToggle() {
     this.registerMode = true;
-  }
-
-  getValues() {
-    return this.http.get('https://localhost:44370/WeatherForecast/aa').subscribe(
-      response => {
-        this.values = response;
-      },
-      error => {
-        console.log(error);
-      });
   }
 
   cancelRegisterMode(registerMode: boolean) {
