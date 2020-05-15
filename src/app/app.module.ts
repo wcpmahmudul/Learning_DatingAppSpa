@@ -11,18 +11,26 @@ import { AuthService } from './services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
+import { ListsComponent } from './lists/lists.component';
+import { MemberListComponent } from './member-list/member-list.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListsComponent,
+    MemberListComponent,
+    MessagesComponent
 
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     BsDropdownModule.forRoot()
